@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViewModelObserve(adapter: ItemAdapter){
         viewModel.getDataList()
-        viewModel.updateItemData.observe(this, {
+        viewModel.updateItemData.observe(this) {
             adapter.submitList(it)
-        })
+        }
     }
 }
